@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediFind - Find medicines near you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>MediFind</h1>
+    <p>Find out which nearby medical store has your medicine, before you go there.</p>
+  </header>
+
+  <main>
+
+    <!-- Search form -->
+    <form id="searchForm">
+      <input id="query" type="text" required
+             placeholder="Medicine, salt or problem (e.g. Dolo 650, Paracetamol, fever)">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Quick search buttons -->
+    <div class="chips">
+      <button type="button" class="chip" data-q="Dolo">Dolo 650</button>
+      <button type="button" class="chip" data-q="Metformin">Metformin</button>
+      <button type="button" class="chip" data-q="Cetirizine">Cetirizine</button>
+      <button type="button" class="chip" data-q="fever">fever</button>
+      <button type="button" class="chip" data-q="acidity">acidity</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <label>Area
+        <select id="area">
+          <option value="all">All areas</option>
+          <option>Basavanagudi</option>
+          <option>Jayanagar</option>
+          <option>Banashankari</option>
+        </select>
+      </label>
+
+      <label>Sort by
+        <select id="sort">
+          <option value="stock">In stock first</option>
+          <option value="price">Price: low to high</option>
+        </select>
+      </label>
+
+      <label class="check">
+        <input id="openNow" type="checkbox"> Open now
+      </label>
+    </div>
+
+    <p id="summary" aria-live="polite">Search a medicine to see which stores have it.</p>
+    <div id="results"></div>
+
+    <section class="how">
+      <h2>What makes MediFind different</h2>
+      <ul>
+        <li>Search by medicine name, salt or problem.</li>
+        <li>If a medicine is out of stock, we show the same salt available in that store.</li>
+        <li>Compare prices and see which stores are open right now.</li>
+        <li>Users can report stock, so the information stays fresh.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Demo with sample data. Stores, prices and stock shown here are not real.</p>
+    <p>MediFind only shows availability. It does not give medical advice. Ask a doctor or pharmacist before taking any medicine.</p>
+    <button type="button" id="resetReports" class="link">Reset user reports</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

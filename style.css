@@ -1,0 +1,216 @@
+/* ===== Basic setup ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f3ff;
+  color: #14163a;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 40px 16px 14px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 44px;
+  color: #5b35c4;
+}
+
+header p { margin: 0; color: #464b7a; }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== Search form ===== */
+#searchForm {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  padding: 13px;
+  border: 2px solid #d9cffa;
+  border-radius: 10px;
+}
+
+button {
+  font-size: 16px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #5b35c4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #5b35c4;
+  outline-offset: 2px;
+}
+
+/* ===== Quick search chips ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.chip {
+  padding: 7px 14px;
+  font-size: 14px;
+  background: #eae4ff;
+  color: #14163a;
+  border-radius: 20px;
+}
+
+/* ===== Filters ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+select {
+  font-size: 15px;
+  padding: 8px;
+  border: 2px solid #d9cffa;
+  border-radius: 8px;
+  margin-left: 6px;
+  background: #fff;
+}
+
+.check input { margin-right: 6px; }
+
+#summary {
+  color: #464b7a;
+  margin: 14px 0 4px;
+}
+
+/* ===== Result cards ===== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 14px;
+  box-shadow: 0 2px 8px rgba(91, 53, 196, 0.12);
+}
+
+.card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card h3 { margin: 0; font-size: 20px; }
+.card p { margin: 8px 0 0; }
+
+.salt { color: #464b7a; font-size: 14px; }
+.addr { color: #464b7a; font-size: 14px; }
+.price { font-size: 18px; margin-left: 8px; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.yes { background: #d8f5e8; color: #0e7a52; }
+.no { background: #fde0e6; color: #b3203f; }
+.open { background: #d8f5e8; color: #0e7a52; }
+.closed { background: #eceaf3; color: #464b7a; }
+.rx { background: #fff0c9; color: #7a5200; }
+
+.alt {
+  background: #eae4ff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.actions a {
+  color: #5b35c4;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #d9cffa;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.actions button {
+  font-size: 13px;
+  padding: 7px 12px;
+  background: #fff;
+  color: #14163a;
+  border: 2px solid #d9cffa;
+  font-weight: normal;
+}
+
+.reported {
+  font-size: 13px;
+  color: #464b7a;
+  margin-top: 8px;
+}
+
+/* ===== Info section and footer ===== */
+.how {
+  margin-top: 40px;
+  padding: 20px;
+  background: #eae4ff;
+  border-radius: 16px;
+}
+
+.how h2 { margin-top: 0; font-size: 22px; }
+.how li { margin-bottom: 6px; }
+
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  font-size: 14px;
+  color: #464b7a;
+}
+
+.link {
+  background: none;
+  color: #5b35c4;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  #searchForm { flex-direction: column; }
+}
